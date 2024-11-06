@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(ag.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background: navy;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu .dropdown {
+    display: none;
+    position: absolute;
+    background: purple;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 5px 10px;
+}
+
+.dropdown a {
+    color: #fff;
+}
+
+.hero {
+    background: lavender;
+    color: purple;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-button {
+    background: maroon;
+    color: green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.services-overview {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer {
+    background: navy;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: 250px;
+}
+
+.auth {
+    display: flex;
+    gap: 15px;
+}
+
+.auth a {
+    color: #fff;
+}
+footer p {
+    margin: 0;
+}

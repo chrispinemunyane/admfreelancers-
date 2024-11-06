@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admiralis Freelances</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(gen.jpg);
+            background-size: 150%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background: navy;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .menu .dropdown {
+            display: none;
+            position: absolute;
+            background: purple;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        .menu li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            padding: 5px 10px;
+        }
+
+        .dropdown a {
+            color: #fff;
+        }
+
+        .hero {
+            background: grey;
+            color: maroon;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            background: darkmagenta;
+            color: whitesmoke;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .services-overview {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .signup-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .signup-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-form button {
+            background: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: navy;
+            color: #fff;
+            text-align: center;
+            padding: 2px 0;
+            margin-top: 250px;
+        }
+
+        .auth {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth a {
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Admiralis Freelancers</div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="aboutus.html">PLATFORMS</a>
+                    <ul class="dropdown">
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="">FIND WORK</a></li>
+                        <li><a href="#">DELIVER WORK </a></li>
+                        <li><a href="#">DASHBOARD</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="dd.html">Writing Services</a></li>
+                        <li><a href="#">Web and Graphic Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Development Services</a></li>
+                        <li><a href="#">Consultation Services</a></li>
+                        <li><a href="#">Blogging</a></li>
+                        <li><a href="#">Virtual Assistance</a></li>
+                        <li><a href="#">Transcription</a></li>
+                        <li><a href="#">Online Tutoring</a></li>
+                        <li><a href="#">Typing Jobs</a></li>
+                    </ul>
+                </li>
+                <li><a href="trio.html">CONTACT US</a></li>
+                <li class="auth">
+                    <a href="signup.html"><i class="fas fa-user"></i> Sign Up</a>
+                    <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Admiralis Freelancers</h1>
+            <p>A platform for professional freelance services.</p>
+            <br><a href="#" class="cta-button">Get Started</a>
+        </section>
+
+        <section class="services-overview">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to meet your needs.</p>
+        </section>
+
+        <section class="signup-form">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript to handle dropdown menu interaction
+        document.querySelectorAll('.menu li').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'block';
+                }
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Admiralis Freelances. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Admiralis Freelancers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: navy;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .signup-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: navy;
+        }
+
+        .signup-form input,
+        .signup-form select,
+        .signup-form button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .signup-form button {
+            background: darkmagenta;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .signup-form button:hover {
+            background-color: purple;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .auth-footer a {
+            color: darkmagenta;
+            text-decoration: none;
+        }
+
+        footer {
+            background: navy;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Admiralis Freelancers</div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="signup-form">
+                <h2>Sign Up</h2>
+                <form action="/submit_signup" method="POST">
+                    <input type="text" placeholder="Full Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+                    
+                    <select name="role" required>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button type="submit">Create Account</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Admiralis Freelances. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
